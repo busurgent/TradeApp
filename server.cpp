@@ -100,6 +100,13 @@ public:
     // "Регистрирует" нового пользователя и возвращает его ID.
     std::string RegisterNewUser(const std::string& aUserName)
     {
+        for (auto it = mUsers.begin(); it != mUsers.end(); ++it)
+        {
+            if (it->second.userName == aUserName)
+            {
+                return std::to_string(it->first);
+            }
+        }
         size_t newUserId = mUsers.size();
         mUsers[newUserId].userName = aUserName;
         mUsers[newUserId].usd = 0;
