@@ -139,7 +139,7 @@ public:
         new_deal.position = mDeals.size();
         mDeals.push_back(new_deal);
         Algorithm();
-        return "Your application is being processed";
+        return "Your application is being processed\n";
     } catch (std::exception& e) {
         return "Incorrect input\n";
     }

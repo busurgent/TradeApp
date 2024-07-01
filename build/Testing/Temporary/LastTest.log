@@ -1,10 +1,10 @@
-Start testing: Jul 01 16:43 MSK
+Start testing: Jul 01 20:05 MSK
 ----------------------------------------------------------
 1/1 Testing: TradingServerTests
 1/1 Test: TradingServerTests
 Command: "/home/ilya/TradeApp/build/TradingServerTests"
 Directory: /home/ilya/TradeApp/build
-"TradingServerTests" start time: Jul 01 16:43 MSK
+"TradingServerTests" start time: Jul 01 20:05 MSK
 Output:
 ----------------------------------------------------------
 [==========] Running 7 tests from 1 test suite.
@@ -19,22 +19,22 @@ Output:
 [ RUN      ] TradingServerTest.SameOperationPrice
 [       OK ] TradingServerTest.SameOperationPrice (1 ms)
 [ RUN      ] TradingServerTest.DifferentPrices1
-[       OK ] TradingServerTest.DifferentPrices1 (2 ms)
+[       OK ] TradingServerTest.DifferentPrices1 (1 ms)
 [ RUN      ] TradingServerTest.DifferentPrices2
-[       OK ] TradingServerTest.DifferentPrices2 (2 ms)
+[       OK ] TradingServerTest.DifferentPrices2 (1 ms)
 [ RUN      ] TradingServerTest.InvalidTradingRequests
 [       OK ] TradingServerTest.InvalidTradingRequests (0 ms)
-[----------] 7 tests from TradingServerTest (10 ms total)
+[----------] 7 tests from TradingServerTest (8 ms total)
 
 [----------] Global test environment tear-down
-[==========] 7 tests from 1 test suite ran. (10 ms total)
+[==========] 7 tests from 1 test suite ran. (8 ms total)
 [  PASSED  ] 7 tests.
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"TradingServerTests" end time: Jul 01 16:43 MSK
+"TradingServerTests" end time: Jul 01 20:05 MSK
 "TradingServerTests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jul 01 16:43 MSK
+End testing: Jul 01 20:05 MSK

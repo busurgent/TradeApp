@@ -62,17 +62,17 @@ TEST_F(TradingServerTest, TestTradingScenario) {
     request["Message"] = "20:60:buy";
     connectToServer();
     std::string response4 = sendRequest(request);
-    EXPECT_EQ(response4, "Your application is being processed");
+    EXPECT_EQ(response4, "Your application is being processed\n");
 
     request["UserId"] = "1";
     request["Message"] = "30:61:buy";
     std::string response5 = sendRequest(request);
-    EXPECT_EQ(response5, "Your application is being processed");
+    EXPECT_EQ(response5, "Your application is being processed\n");
 
     request["UserId"] = "2";
     request["Message"] = "30:60:sell";
     std::string response6 = sendRequest(request);
-    EXPECT_EQ(response6, "Your application is being processed");
+    EXPECT_EQ(response6, "Your application is being processed\n");
 
     // Проверка статуса пользователей
     request["ReqType"] = Requests::Status;
@@ -114,17 +114,17 @@ TEST_F(TradingServerTest, RegisterUserAndPlaceOrders) {
     request["UserId"] = "0";
     request["Message"] = "10:62:buy";
     std::string response4 = sendRequest(request);
-    EXPECT_EQ(response4, "Your application is being processed");
+    EXPECT_EQ(response4, "Your application is being processed\n");
 
     request["UserId"] = "1";
     request["Message"] = "20:63:buy";
     std::string response5 = sendRequest(request);
-    EXPECT_EQ(response5, "Your application is being processed");
+    EXPECT_EQ(response5, "Your application is being processed\n");
 
     request["UserId"] = "2";
     request["Message"] = "30:61:sell";
     std::string response6 = sendRequest(request);
-    EXPECT_EQ(response6, "Your application is being processed");
+    EXPECT_EQ(response6, "Your application is being processed\n");
 
     // Проверка статуса
     request["ReqType"] = Requests::Status;
@@ -185,37 +185,37 @@ TEST_F(TradingServerTest, MixedOperationsPartialMatchAndNoMatch) {
     request["UserId"] = "0";
     request["Message"] = "50:100:buy";
     std::string response8 = sendRequest(request);
-    EXPECT_EQ(response8, "Your application is being processed");
+    EXPECT_EQ(response8, "Your application is being processed\n");
 
     request["UserId"] = "1";
     request["Message"] = "40:110:sell";
     std::string response9 = sendRequest(request);
-    EXPECT_EQ(response9, "Your application is being processed");
+    EXPECT_EQ(response9, "Your application is being processed\n");
 
     request["UserId"] = "2";
     request["Message"] = "30:90:sell";
     std::string response10 = sendRequest(request);
-    EXPECT_EQ(response10, "Your application is being processed");
+    EXPECT_EQ(response10, "Your application is being processed\n");
 
     request["UserId"] = "3";
     request["Message"] = "20:95:buy";
     std::string response11 = sendRequest(request);
-    EXPECT_EQ(response11, "Your application is being processed");
+    EXPECT_EQ(response11, "Your application is being processed\n");
 
     request["UserId"] = "4";
     request["Message"] = "60:100:sell";
     std::string response12 = sendRequest(request);
-    EXPECT_EQ(response12, "Your application is being processed");
+    EXPECT_EQ(response12, "Your application is being processed\n");
 
     request["UserId"] = "5";
     request["Message"] = "50:105:sell";
     std::string response13 = sendRequest(request);
-    EXPECT_EQ(response13, "Your application is being processed");
+    EXPECT_EQ(response13, "Your application is being processed\n");
 
     request["UserId"] = "6";
     request["Message"] = "10:120:buy";
     std::string response14 = sendRequest(request);
-    EXPECT_EQ(response13, "Your application is being processed");
+    EXPECT_EQ(response13, "Your application is being processed\n");
     
     // Проверка статуса
     request["ReqType"] = Requests::Status;
@@ -292,37 +292,37 @@ TEST_F(TradingServerTest, SameOperationPrice) {
     request["UserId"] = "0";
     request["Message"] = "70:100:buy";
     std::string response8 = sendRequest(request);
-    EXPECT_EQ(response8, "Your application is being processed");
+    EXPECT_EQ(response8, "Your application is being processed\n");
 
     request["UserId"] = "1";
     request["Message"] = "30:100:sell";
     std::string response9 = sendRequest(request);
-    EXPECT_EQ(response9, "Your application is being processed");
+    EXPECT_EQ(response9, "Your application is being processed\n");
 
     request["UserId"] = "2";
     request["Message"] = "40:100:sell";
     std::string response10 = sendRequest(request);
-    EXPECT_EQ(response10, "Your application is being processed");
+    EXPECT_EQ(response10, "Your application is being processed\n");
 
     request["UserId"] = "3";
     request["Message"] = "10:100:buy";
     std::string response11 = sendRequest(request);
-    EXPECT_EQ(response11, "Your application is being processed");
+    EXPECT_EQ(response11, "Your application is being processed\n");
 
     request["UserId"] = "4";
     request["Message"] = "20:100:sell";
     std::string response12 = sendRequest(request);
-    EXPECT_EQ(response12, "Your application is being processed");
+    EXPECT_EQ(response12, "Your application is being processed\n");
 
     request["UserId"] = "5";
     request["Message"] = "40:100:sell";
     std::string response13 = sendRequest(request);
-    EXPECT_EQ(response13, "Your application is being processed");
+    EXPECT_EQ(response13, "Your application is being processed\n");
 
     request["UserId"] = "6";
     request["Message"] = "40:100:buy";
     std::string response14 = sendRequest(request);
-    EXPECT_EQ(response13, "Your application is being processed");
+    EXPECT_EQ(response13, "Your application is being processed\n");
     
     // Проверка статуса
     request["ReqType"] = Requests::Status;
@@ -399,37 +399,37 @@ TEST_F(TradingServerTest, DifferentPrices1) {
     request["UserId"] = "0";
     request["Message"] = "25:60:buy";
     std::string response8 = sendRequest(request);
-    EXPECT_EQ(response8, "Your application is being processed");
+    EXPECT_EQ(response8, "Your application is being processed\n");
 
     request["UserId"] = "1";
     request["Message"] = "35:70:buy";
     std::string response9 = sendRequest(request);
-    EXPECT_EQ(response9, "Your application is being processed");
+    EXPECT_EQ(response9, "Your application is being processed\n");
 
     request["UserId"] = "2";
     request["Message"] = "30:60:sell";
     std::string response10 = sendRequest(request);
-    EXPECT_EQ(response10, "Your application is being processed");
+    EXPECT_EQ(response10, "Your application is being processed\n");
 
     request["UserId"] = "3";
     request["Message"] = "15:80:buy";
     std::string response11 = sendRequest(request);
-    EXPECT_EQ(response11, "Your application is being processed");
+    EXPECT_EQ(response11, "Your application is being processed\n");
 
     request["UserId"] = "4";
     request["Message"] = "20:70:sell";
     std::string response12 = sendRequest(request);
-    EXPECT_EQ(response12, "Your application is being processed");
+    EXPECT_EQ(response12, "Your application is being processed\n");
 
     request["UserId"] = "5";
     request["Message"] = "10:80:sell";
     std::string response13 = sendRequest(request);
-    EXPECT_EQ(response13, "Your application is being processed");
+    EXPECT_EQ(response13, "Your application is being processed\n");
 
     request["UserId"] = "6";
     request["Message"] = "30:60:sell";
     std::string response14 = sendRequest(request);
-    EXPECT_EQ(response13, "Your application is being processed");
+    EXPECT_EQ(response13, "Your application is being processed\n");
     
     // Проверка статуса
     request["ReqType"] = Requests::Status;
@@ -507,37 +507,37 @@ TEST_F(TradingServerTest, DifferentPrices2) {
     request["UserId"] = "0";
     request["Message"] = "100:90:buy";
     std::string response8 = sendRequest(request);
-    EXPECT_EQ(response8, "Your application is being processed");
+    EXPECT_EQ(response8, "Your application is being processed\n");
 
     request["UserId"] = "1";
     request["Message"] = "40:80:sell";
     std::string response9 = sendRequest(request);
-    EXPECT_EQ(response9, "Your application is being processed");
+    EXPECT_EQ(response9, "Your application is being processed\n");
 
     request["UserId"] = "2";
     request["Message"] = "50:85:sell";
     std::string response10 = sendRequest(request);
-    EXPECT_EQ(response10, "Your application is being processed");
+    EXPECT_EQ(response10, "Your application is being processed\n");
 
     request["UserId"] = "3";
     request["Message"] = "30:95:buy";
     std::string response11 = sendRequest(request);
-    EXPECT_EQ(response11, "Your application is being processed");
+    EXPECT_EQ(response11, "Your application is being processed\n");
 
     request["UserId"] = "4";
     request["Message"] = "20:80:buy";
     std::string response12 = sendRequest(request);
-    EXPECT_EQ(response12, "Your application is being processed");
+    EXPECT_EQ(response12, "Your application is being processed\n");
 
     request["UserId"] = "5";
     request["Message"] = "60:100:sell";
     std::string response13 = sendRequest(request);
-    EXPECT_EQ(response13, "Your application is being processed");
+    EXPECT_EQ(response13, "Your application is being processed\n");
 
     request["UserId"] = "6";
     request["Message"] = "50:85:buy";
     std::string response14 = sendRequest(request);
-    EXPECT_EQ(response13, "Your application is being processed");
+    EXPECT_EQ(response13, "Your application is being processed\n");
     
     // Проверка статуса
     request["ReqType"] = Requests::Status;
