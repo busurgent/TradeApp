@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/TradingServerTests.dir/test_trading.cpp.o -o TradingServerTests  lib/libgtest.a lib/libgtest_main.a lib/libgtest.a 
